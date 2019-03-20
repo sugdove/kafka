@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>模型设置</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta content="" name="description" />
+
+    <meta content="" name="author" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="icon" href="media/image/dsg-logo2.png" type="image/x-icon">
+
+    <link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/model.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome2.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+    <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+
+
+    <link rel="stylesheet" type="text/css" href="media/css/select2_metro.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap-timepicker.min.css" />
+
+    <link rel="stylesheet" href="media/css/DT_bootstrap.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/jquery-confirm-master/css/jquery-confirm.css">
+
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!--
+        <link rel="shortcut icon" href="media/image/favicon.ico" />
+    -->
+
+    <link rel="stylesheet" type="text/css" href="media/jquery-confirm-master/css/jquery-confirm.css">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed">
+
+<!-- BEGIN HEADER -->
+
+<div class="header navbar navbar-inverse navbar-fixed-top">
+
+    <!-- BEGIN TOP NAVIGATION BAR -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid">
+
+            <!-- BEGIN LOGO -->
+
+            <a class="brand" href="javascript:void(0)">
+
+                <img src="media/image/dsg-logo.png" style="height: 56px;margin-top: -16px;" alt="logo"/>
+
+            </a>
+
+            <!-- END LOGO -->
+
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+            <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+                <img src="media/image/menu-toggler.png" alt="" />
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+    <!-- END TOP NAVIGATION BAR -->
+
+</div>
+
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+
+<div class="page-container row-fluid">
+
+    <!-- BEGIN SIDEBAR -->
+
+    <div class="page-sidebar nav-collapse collapse">
+
+        <!-- BEGIN SIDEBAR MENU -->
+
+        <ul class="page-sidebar-menu">
+
+            <li>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+                <div class="sidebar-toggler hidden-phone"></div>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+            </li>
+            <li>
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-wrench fa-fw"></i>
+
+                    <span class="title">操作</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li >
+
+                        <a href="backup.html">
+                            <i class="fa fa-cloud-upload fa-fw"></i>
+
+                            数据导入</a>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="export.html">
+
+                            <i class="fa fa-cloud-download fa-fw"></i>
+
+                            数据导出</a>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="synchronization.html">
+
+                            <i class="fa fa-cubes fa-fw"></i>
+
+                            HBase容灾</a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-cog fa-fw"></i>
+
+                    <span class="title">管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li class="start ">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-tasks fa-fw"></i>
+
+                            <span class="title">任务</span>
+
+                            <span class="arrow"></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li class="">
+
+                                <a href="all_task.html">
+
+
+                                    数据流任务</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="synchronization_task.html">
+
+
+                                    容灾任务</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-jsfiddle fa-fw"></i>
+
+                            <span class="title">Kafka</span>
+
+                            <span class="arrow "></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li >
+
+                                <a href="add_virtualization.html">
+
+                                    添加Kafka</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="kafka.html">
+
+                                    Kafka管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class=" ">
+
+                        <a href="#">
+
+                            <i class="fa fa-cube fa-fw"></i>
+
+                            <span class="title">HBase</span>
+
+                            <span class="arrow"></span>
+
+
+                        </a>
+                        <ul class="sub-menu">
+
+                            <li class="">
+
+                                <a href="add_HBase.html">
+
+                                    添加HBase</a>
+
+                            </li>
+
+
+                            <li class="">
+
+                                <a href="HBase.html">
+
+                                    HBase管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-codepen fa-fw"></i>
+
+                            <span class="title">Zookeeper</span>
+
+                            <span class="arrow "></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li >
+
+                                <a href="virtualization.html">
+
+
+                                    Zookeeper管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <li class="active">
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-indent fa-fw"></i>
+
+                    <span class="title">数据挖掘</span>
+
+                    <span class="arrow open"></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="add_model.html">
+
+                            <i class="glyphicon glyphicon-plus"></i>
+
+                            任务添加</a>
+
+                    </li>
+
+                    <li class="active">
+
+                        <a href="model.html">
+
+                            <i class="glyphicon glyphicon-cog"></i>
+
+                            任务管理</a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+        <!-- END SIDEBAR MENU -->
+
+
+        <!-- END SIDEBAR MENU -->
+
+    </div>
+
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN PAGE -->
+
+    <div class="page-content">
+
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <div id="portlet-config" class="modal hide">
+
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"></button>
+
+                <h3>portlet Settings</h3>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>Here will be a configuration form</p>
+
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <!-- BEGIN PAGE CONTAINER-->
+
+        <div class="container-fluid">
+
+            <!-- BEGIN PAGE HEADER-->
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- BEGIN STYLE CUSTOMIZER -->
+
+                    <div class="color-panel hidden-phone">
+
+                        <div class="color-mode-icons icon-color"></div>
+
+                        <div class="color-mode-icons icon-color-close"></div>
+
+                        <div class="color-mode">
+
+                            <p>主题颜色</p>
+
+                            <ul class="inline">
+
+                                <li class="color-black current color-default" data-style="default"></li>
+
+                                <li class="color-blue" data-style="blue"></li>
+
+                                <li class="color-brown" data-style="brown"></li>
+
+                                <li class="color-purple" data-style="purple"></li>
+
+                                <li class="color-grey" data-style="grey"></li>
+
+                                <li class="color-white color-light" data-style="light"></li>
+
+                            </ul>
+
+                            <label>
+
+                                <span>布局</span>
+
+                                <select class="layout-option m-wrap small">
+
+                                    <option value="fluid" selected>流布局</option>
+
+                                    <option value="boxed">盒布局</option>
+
+                                </select>
+
+                            </label>
+
+
+                            <label>
+
+                                <span>工具栏</span>
+
+                                <select class="sidebar-option m-wrap small">
+
+                                    <option value="fixed">自动</option>
+
+                                    <option value="default" selected>默认</option>
+
+                                </select>
+
+                            </label>
+                            <label>
+
+                                <span>页头</span>
+
+                                <select class="header-option m-wrap small">
+
+                                    <option value="fixed" selected>固定</option>
+
+                                    <option value="default">默认</option>
+
+                                </select>
+
+                            </label>
+                            <label>
+
+                                <span>页脚</span>
+
+                                <select class="footer-option m-wrap small">
+
+                                    <option value="fixed">固定</option>
+
+                                    <option value="default" selected>默认</option>
+
+                                </select>
+
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- END BEGIN STYLE CUSTOMIZER -->
+
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+                    <h3 class="page-title">
+
+                        任务管理 <small>管理模型任务</small>
+
+                    </h3>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- END PAGE HEADER-->
+
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row-fluid">
+
+                <div class="span12" >
+
+                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+                    <div class="portlet box blue " id="HBase_table">
+
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-globe"></i>任务管理</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="collapse"></a>
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body">
+
+
+                            <div class="row" style="margin: 0px !important;">
+
+                                <div class="clearfix"  style="padding-bottom: 10px">
+
+                                    <div class="btn-group">
+
+                                        <button class="btn green"  style="margin-right: 8px;" onclick="window.location.href='add_model.html'">
+
+                                            添加 <i class="icon-plus"></i>
+
+                                        </button>
+                                        <button class="btn red" id="model_task_delete" onclick="return false">
+
+                                            删除 <i class="icon-trash"></i>
+
+                                        </button>
+                                    </div>
+
+
+                                </div>
+
+                                <table id="all_task" class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="1%"><input type="checkbox" class="group-checkable"
+                                                              data-set="#all_task .checkboxes"/></th>
+                                        <th>存储路径</th>
+                                        <!--<th>输入路径</th>-->
+                                        <th>任务类型</th>
+                                        <th>调用方法</th>
+                                        <th>任务参数</th>
+                                        <th>时间</th>
+                                        <th>名称</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="all_task_tbody">
+
+                                    </tbody>
+
+
+
+                                </table>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="portlet box blue hide" id="TableInfo">
+
+                        <div class="portlet-title">
+
+                            <div class="caption" id="SecondTitle"><i class="icon-globe"></i>HBase</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="collapse"></a>
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body">
+
+                            <div class="clearfix">
+
+                                <div class="btn-group">
+
+                                    <button class="btn green" id="Return">
+
+                                        <i class="icon-arrow-left"></i>	返回
+
+                                    </button>
+
+                                    <button class="btn blue" data-toggle="modal" data-target="#myModal">
+
+                                        <i class="icon-search"></i>	查询
+
+                                    </button>
+
+                                </div>
+
+                                <div id="itemContainer">
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- END EXAMPLE TABLE PORTLET-->
+
+                </div>
+
+            </div>
+
+            <!-- END PAGE CONTENT-->
+
+        </div>
+
+        <!-- END PAGE CONTAINER-->
+
+    </div>
+
+    <!-- END PAGE -->
+
+</div>
+
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-inner">
+
+        Copyright 2017-2022 <a href="http://www.dsgdata.com/" >www.dsgdata.com</a> 迪思杰 京ICP备05013295号
+
+    </div>
+
+    <div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+    </div>
+
+</div>
+<!-- 详细内容模态框（Modal） -->
+<div class="modal fade hide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">详细内容</h4>
+            </div>
+            <form action="" id="detail_param_form">
+            <div class="modal-body">
+                <table class="table table-hover table-bordered" id="detail_content">
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<script src="media/js/localhost.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="media/js-plus-in/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/bootstrap.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+
+<script src="media/js-plus-in/excanvas.min.js"></script>
+
+<script src="media/js-plus-in/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="media/js-plus-in/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.uniform.min.js" type="text/javascript" ></script>
+
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<script type="text/javascript" src="media/js-plus-in/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/additional-methods.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/jquery.bootstrap.wizard.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/bootstrap-timepicker.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/jquery.dataTable.min.js"></script>
+
+<script  src="media/jquery-confirm-master/js/jquery-confirm.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/DT_bootstrap.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/messages_zh.js"></script>
+
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+
+<script src="media/js-plus-in/app.js"></script>
+
+<script src="media/js/user_message.js" type="text/javascript"></script>
+
+<script src="media/js/model.js"></script>
+
+<script src="media/js/form-wizard-model.js"></script>
+
+
+</body>
+<script>
+    jQuery(document).ready(function() {
+
+        App.init();
+
+        FormWizard.init();
+
+        $('#timepicker1').timepicker();
+
+        //查询所有任务
+        $.ajax({
+            cache: true,
+            type: "post",
+            url: "http://" + localhost2 + "/commandExecute/model/get",
+            async: false,
+            success: function (data) {
+                var length = data.length;
+                var string = "";
+                for (var i = 0; i < length; i++) {
+                    var serverid = data[i].serverid;
+                    var storepath = data[i].storepath;
+                    var inputpath = data[i].inputpath;
+                    var type = data[i].type;
+                    var classPath = data[i].classPath;
+                    var parameters = data[i].parameters;
+                    var timestemp = data[i].timestemp;
+                    var description = data[i].description;
+                    var status = data[i].status;
+                    switch (status) {
+                        case "运行中":
+                            status = "<span class='label label-info'>运行中</span>";
+                            break;
+                        case "运行结束":
+                            status = "<span class='label label-success'>已结束</span>";
+                            break;
+                        case "运行失败":
+                            status = "<span class='label label-danger'>失败</span>";
+                            break;
+                    }
+                    string += "<tr><td><input type='checkbox' class='checkboxes ck2' value='" + serverid + "' name='serverids'></td><td title='"+storepath+"' class='overhide'>" + storepath + "</td><td>" + type + "</td><td>" + classPath + "</td><td style='word-break:break-all' class='overhide' title='"+parameters+"'>" + parameters + "</td><td>" + timestemp + "</td><td>" + description + "</td><td>" + status + "</td><td><span class='btn blue icn-only detail_content' title='查看内容'><i class='fa fa-search'></i></span></td></tr>"
+                }
+                $("#all_task_tbody").html(string);
+                //改变checkbox样式
+                if (!jQuery().uniform) {
+                    return;
+                }
+                var test = $("input[type=checkbox]:not(.toggle), input[type=radio]:not(.toggle, .star)");
+                if (test.size() > 0) {
+                    test.each(function () {
+                        if ($(this).parents(".checker").size() == 0) {
+                            $(this).show();
+                            $(this).uniform();
+                        }
+                    });
+                }
+                $("#all_task").dataTable({
+
+                    "aoColumnDefs": [
+                        {"orderable": false, "aTargets": [0]}// 制定列不参与排序
+                    ],
+                    "aLengthMenu": [
+                        [7, 14, -1],
+                        [7, 14, "All"] // change per page values here
+                    ],
+                    // set the initial value
+                    "iDisplayLength": 7,
+                    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+                    "sPaginationType": "bootstrap",
+                    language: {
+                        "sProcessing": "处理中...",
+                        "sLengthMenu": "显示 _MENU_ 项结果",
+                        "sZeroRecords": "没有匹配结果",
+                        "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                        "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                        "sInfoPostFix": "",
+                        "sSearch": "搜索:",
+                        "sUrl": "",
+                        "sEmptyTable": "表中数据为空",
+                        "sLoadingRecords": "载入中...",
+                        "sInfoThousands": ",",
+                        "oPaginate": {
+                            "sFirst": "首页",
+                            "sPrevious": "上页",
+                            "sNext": "下页",
+                            "sLast": "末页"
+                        },
+                        "oAria": {
+                            "sSortAscending": ": 以升序排列此列",
+                            "sSortDescending": ": 以降序排列此列"
+                        }
+                    },
+                    "aaSorting": [[7, "asc"]]//默认第几个排序
+                })
+                //点击th里checkbox后td里的checkbox改变
+                jQuery('#all_task .group-checkable').change(function () {
+                    var set = jQuery(this).attr("data-set");
+                    var checked = jQuery(this).is(":checked");
+                    jQuery(set).each(function () {
+                        if (checked) {
+                            $(this).attr("checked", true);
+                        } else {
+                            $(this).attr("checked", false);
+                        }
+                    });
+                    jQuery.uniform.update(set);
+                });
+            },
+            error: function () {
+                alert("系统错误")
+            }
+        });
+    });
+</script>
+</html>

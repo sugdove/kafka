@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>HBase容灾</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta content="" name="description" />
+
+    <meta content="" name="author" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="icon" href="media/image/dsg-logo2.png" type="image/x-icon">
+
+    <link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/synchronization.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome2.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+    <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+
+
+    <link rel="stylesheet" type="text/css" href="media/css/select2_metro.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap-timepicker.min.css" />
+
+    <link rel="stylesheet" href="media/css/DT_bootstrap.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/jquery-confirm-master/css/jquery-confirm.css">
+
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!--
+        <link rel="shortcut icon" href="media/image/favicon.ico" />
+    -->
+
+    <link rel="stylesheet" type="text/css" href="media/jquery-confirm-master/css/jquery-confirm.css">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed">
+
+<!-- BEGIN HEADER -->
+
+<div class="header navbar navbar-inverse navbar-fixed-top">
+
+    <!-- BEGIN TOP NAVIGATION BAR -->
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid">
+
+            <!-- BEGIN LOGO -->
+
+            <a class="brand" href="javascript:void(0)">
+
+                <img src="media/image/dsg-logo.png" style="height: 56px;margin-top: -16px;" alt="logo"/>
+
+            </a>
+
+            <!-- END LOGO -->
+
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+            <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+                <img src="media/image/menu-toggler.png" alt="" />
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+    <!-- END TOP NAVIGATION BAR -->
+
+</div>
+
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+
+<div class="page-container row-fluid">
+
+    <!-- BEGIN SIDEBAR -->
+
+    <div class="page-sidebar nav-collapse collapse">
+
+        <!-- BEGIN SIDEBAR MENU -->
+
+        <ul class="page-sidebar-menu">
+
+            <li>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+                <div class="sidebar-toggler hidden-phone"></div>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+            </li>
+            <li class="active">
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-wrench fa-fw"></i>
+
+                    <span class="title">操作</span>
+
+                    <span class="arrow open"></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li >
+
+                        <a href="backup.html">
+                            <i class="fa fa-cloud-upload fa-fw"></i>
+
+                            数据导入</a>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="export.html">
+
+                            <i class="fa fa-cloud-download fa-fw"></i>
+
+                            数据导出</a>
+
+                    </li>
+
+                    <li class="active">
+
+                        <a href="synchronization.html">
+
+                            <i class="fa fa-cubes fa-fw"></i>
+
+                            HBase容灾</a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-cog fa-fw"></i>
+
+                    <span class="title">管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li class="start ">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-tasks fa-fw"></i>
+
+                            <span class="title">任务</span>
+
+                            <span class="arrow"></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li class="">
+
+                                <a href="all_task.html">
+
+
+                                    数据流任务</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="synchronization_task.html">
+
+
+                                    容灾任务</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-jsfiddle fa-fw"></i>
+
+                            <span class="title">Kafka</span>
+
+                            <span class="arrow "></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li >
+
+                                <a href="add_virtualization.html">
+
+                                    添加Kafka</a>
+
+                            </li>
+
+                            <li class="">
+
+                                <a href="kafka.html">
+
+                                    Kafka管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class=" ">
+
+                        <a href="#">
+
+                            <i class="fa fa-cube fa-fw"></i>
+
+                            <span class="title">HBase</span>
+
+                            <span class="arrow"></span>
+
+
+                        </a>
+                        <ul class="sub-menu">
+
+                            <li class="">
+
+                                <a href="add_HBase.html">
+
+                                    添加HBase</a>
+
+                            </li>
+
+
+                            <li class="">
+
+                                <a href="HBase.html">
+
+                                    HBase管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="">
+
+                        <a href="javascript:;">
+
+                            <i class="fa fa-codepen fa-fw"></i>
+
+                            <span class="title">Zookeeper</span>
+
+                            <span class="arrow "></span>
+
+                        </a>
+
+                        <ul class="sub-menu">
+
+                            <li >
+
+                                <a href="virtualization.html">
+
+
+                                    Zookeeper管理</a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <li>
+
+                <a href="javascript:;">
+
+                    <i class="fa fa-indent fa-fw"></i>
+
+                    <span class="title">数据挖掘</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="add_model.html">
+
+                            <i class="glyphicon glyphicon-plus"></i>
+
+                            任务添加</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="model.html">
+
+                            <i class="glyphicon glyphicon-cog"></i>
+
+                            任务管理</a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+        <!-- END SIDEBAR MENU -->
+
+
+        <!-- END SIDEBAR MENU -->
+
+    </div>
+
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN PAGE -->
+
+    <div class="page-content">
+
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <div id="portlet-config" class="modal hide">
+
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"></button>
+
+                <h3>portlet Settings</h3>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>Here will be a configuration form</p>
+
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+        <!-- BEGIN PAGE CONTAINER-->
+
+        <div class="container-fluid">
+
+            <!-- BEGIN PAGE HEADER-->
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- BEGIN STYLE CUSTOMIZER -->
+
+                    <div class="color-panel hidden-phone">
+
+                        <div class="color-mode-icons icon-color"></div>
+
+                        <div class="color-mode-icons icon-color-close"></div>
+
+                        <div class="color-mode">
+
+                            <p>主题颜色</p>
+
+                            <ul class="inline">
+
+                                <li class="color-black current color-default" data-style="default"></li>
+
+                                <li class="color-blue" data-style="blue"></li>
+
+                                <li class="color-brown" data-style="brown"></li>
+
+                                <li class="color-purple" data-style="purple"></li>
+
+                                <li class="color-grey" data-style="grey"></li>
+
+                                <li class="color-white color-light" data-style="light"></li>
+
+                            </ul>
+
+                            <label>
+
+                                <span>布局</span>
+
+                                <select class="layout-option m-wrap small">
+
+                                    <option value="fluid" selected>流布局</option>
+
+                                    <option value="boxed">盒布局</option>
+
+                                </select>
+
+                            </label>
+
+
+                            <label>
+
+                                <span>工具栏</span>
+
+                                <select class="sidebar-option m-wrap small">
+
+                                    <option value="fixed">自动</option>
+
+                                    <option value="default" selected>默认</option>
+
+                                </select>
+
+                            </label>
+                            <label>
+
+                                <span>页头</span>
+
+                                <select class="header-option m-wrap small">
+
+                                    <option value="fixed" selected>固定</option>
+
+                                    <option value="default">默认</option>
+
+                                </select>
+
+                            </label>
+                            <label>
+
+                                <span>页脚</span>
+
+                                <select class="footer-option m-wrap small">
+
+                                    <option value="fixed">固定</option>
+
+                                    <option value="default" selected>默认</option>
+
+                                </select>
+
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- END BEGIN STYLE CUSTOMIZER -->
+
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+                    <h3 class="page-title">
+
+                        HBase容灾 <small>创建容灾任务</small>
+
+                    </h3>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- END PAGE HEADER-->
+
+            <!-- BEGIN PAGE CONTENT-->
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+                    <div class="portlet box blue" id="form_wizard_1">
+
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-globe"></i>新建任务</div>
+
+                            <div class="tools">
+
+                                <a href="javascript:;" class="collapse"></a>
+
+                                <a href="javascript:;" class="reload"></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <form action="#" class="form-horizontal" id="submit_form">
+
+                                <div class="form-wizard">
+
+                                    <div class="navbar steps">
+
+                                        <div class="navbar-inner">
+
+                                            <ul class="row-fluid" id="step">
+
+                                                <li class="span3">
+
+                                                    <a href="#tab1" data-toggle="tab" class="step active">
+
+                                                        <span class="number">1</span>
+
+                                                        <span class="desc"><i class="icon-ok"></i>选择源表</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="span3">
+
+                                                    <a href="#tab2" data-toggle="tab" class="step">
+
+                                                        <span class="number">2</span>
+
+                                                        <span class="desc"><i class="icon-ok"></i> 选择目标表 </span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="span3">
+
+                                                    <a href="#tab3" data-toggle="tab" class="step">
+
+                                                        <span class="number">3</span>
+
+                                                        <span class="desc"><i class="icon-ok"></i> 其他配置</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="span3">
+
+                                                    <a href="#tab4" data-toggle="tab" class="step">
+
+                                                        <span class="number">4</span>
+
+                                                        <span class="desc"><i class="icon-ok"></i> 确认配置</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div id="bar" class="progress progress-success progress-striped">
+
+                                        <div class="bar"></div>
+
+                                    </div>
+
+                                    <div class="tab-content">
+
+                                        <div class="alert alert-error hide">
+
+                                            <button class="close" data-dismiss="alert"></button>
+
+                                            您的操作有误，请填写完整信息！
+
+                                        </div>
+
+                                        <div class="alert alert-success hide">
+
+                                            <button class="close" data-dismiss="alert"></button>
+
+                                            您的操作成功！
+
+                                        </div>
+                                        <form id="add-vcenter">
+
+                                            <div class="tab-pane active" id="tab1">
+
+                                                <h4 class="block">请选择源表</h4>
+
+                                                <div class="row" style="width:45%;margin-left: 0px;float: left" >
+
+                                                    <div class="control-group">
+
+
+                                                        <div class="controls" style="margin-left: 0px !important;">
+
+                                                            <div class="iframe" id="if1"  >
+                                                                <div class="black_overlay"></div>
+
+                                                                <div class="spinner">
+                                                                    <div class="bounce1"></div>
+                                                                    <div class="bounce2"></div>
+                                                                    <div class="bounce3"></div>
+                                                                </div>
+
+                                                                <ul id="vmware-list">
+
+                                                                </ul>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="control-group" style="display:none">
+
+                                                        <label class="control-label">主机编号<span class="required">*</span></label>
+
+                                                        <div class="controls">
+
+                                                            <input type="text" class="span6 m-wrap" id="vcid-id" name="vcid" style="width: 31%;"/>
+
+                                                            <span class="help-inline"></span>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="control-group"  style="display:none">
+
+                                                        <label class="control-label">虚拟机编号<span class="required">*</span></label>
+
+                                                        <div class="controls">
+
+                                                            <input type="text" class="span6 m-wrap" id="vmidset-id" name="vmidset" style="width: 31%;"/>
+
+                                                            <span class="help-inline"></span>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="alert alert-info" role="alert" id="alert-info" style="width:50% ;float: left;display: block">选择左边的zookeeper，展开表</div>
+
+                                                <div class="row-fluid" id="table_div" style="display: none">
+
+
+                                                    <table class="table table-bordered table-striped table-hover" id="sample_1">
+
+                                                        <thead id="sample_1_thead">
+
+                                                        <tr>
+
+                                                            <th style="width:8px;"><!--<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />--></th>
+
+                                                            <th>编号</th>
+
+                                                            <th class="hidden-480">表名</th>
+
+                                                            <th class="hidden-480">状态</th>
+
+                                                        </tr>
+
+                                                        </thead>
+
+                                                        <tbody id="v_tbody">
+
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="tab-pane" id="tab2">
+
+                                                <div style="width: 100%;height: 40px;padding-top:10px;">
+
+                                                    <h4 class="block" style="margin-top: -1px;width: 125px;display: block;float: left;">请选择目标表</h4>
+
+                                                    <div style=" float:left;margin-left: 100px"><span id="time_show"></span></div>
+
+                                                </div>
+
+                                                <div class="row" style="width:45%;margin-left: 0px;float: left" >
+
+                                                    <div class="control-group">
+
+
+                                                        <div class="controls" style="margin-left: 0px !important;">
+
+                                                            <div class="iframe" id="if2"  >
+                                                                <div class="black_overlay"></div>
+
+                                                                <div class="spinner">
+                                                                    <div class="bounce1"></div>
+                                                                    <div class="bounce2"></div>
+                                                                    <div class="bounce3"></div>
+                                                                </div>
+
+                                                                <ul id="vmware-list-2">
+
+                                                                </ul>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="control-group" style="display:none">
+
+                                                        <label class="control-label">主机编号<span class="required">*</span></label>
+
+                                                        <div class="controls">
+
+                                                            <input type="text" class="span6 m-wrap" id="vcid-id-2" name="zhbase" style="width: 31%;"/>
+
+                                                            <span class="help-inline"></span>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="control-group"  style="display:none">
+
+                                                        <label class="control-label">虚拟机编号<span class="required">*</span></label>
+
+                                                        <div class="controls">
+
+                                                            <input type="text" class="span6 m-wrap" id="vmidset-id-2" name="vmidset-2" style="width: 31%;"/>
+
+                                                            <span class="help-inline"></span>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="alert alert-info" role="alert" id="alert-info-2" style="width:50% ;float: left;display: block">选择左边的zookeeper，展开表</div>
+
+                                                <div class="row-fluid" id="table_div_2" style="display: none">
+
+
+                                                    <table class="table table-bordered table-striped table-hover" id="sample_2">
+
+                                                        <thead id="sample_2_thead">
+
+                                                        <tr>
+
+                                                            <th style="width:8px;"><!--<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />--></th>
+
+                                                            <th>编号</th>
+
+                                                            <th class="hidden-480">表名</th>
+
+                                                            <th class="hidden-480">状态</th>
+
+                                                        </tr>
+
+                                                        </thead>
+
+                                                        <tbody id="v_tbody_2">
+
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="tab-pane" id="tab3">
+
+                                                <h4 class="block">其他配置</h4>
+
+                                                <div class="control-group">
+
+                                                    <label class="control-label">topic<span class="required">*</span></label>
+
+                                                    <div class="controls">
+
+                                                        <input type="text" class="span6 m-wrap" name="topic" id="tp-name"  style="width: 46%;"/>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="control-group">
+
+                                                    <label class="control-label">组名<span class="required">*</span></label>
+
+                                                    <div class="controls">
+
+                                                        <input type="text" class="span6 m-wrap" name="groupname" id="gp-name"  style="width: 46%;"/>
+
+                                                    </div>
+
+                                                </div>
+
+                                               <!-- <div class="control-group">
+
+                                                    <label class="control-label">描述<span class="required">*</span></label>
+
+                                                    <div class="controls">
+
+                                                        <input type="text" class="span6 m-wrap" name="Msname" id="ms-name"  style="width: 46%;"/>
+
+                                                    </div>
+
+                                                </div>-->
+
+                                            </div>
+
+                                        </form>
+
+                                        <div class="tab-pane" id="tab4">
+
+                                            <h3 class="block">请确认您的配置信息</h3>
+
+                                            <h4 class="form-section">选择源表</h4>
+
+                                            <div class="control-group bb">
+
+                                                <label class="control-label">zookeeper:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="vcid" id="vcid-f"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="control-group bb">
+
+                                                <label class="control-label">表名:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="vmidset" id="vmidset-f"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <h4 class="form-section">选择目标表</h4>
+
+                                            <div class="control-group bb">
+
+                                                <label class="control-label">zookeeper:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="zhbase" id="zhbase"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="control-group bb" id="backup_strategy_1">
+
+                                                <label class="control-label">表名:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="vmidset-2" id="bktype-f"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <h4 class="form-section">其他配置</h4>
+
+                                            <div class="control-group bb" id="name4">
+
+                                                <label class="control-label">topic:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="topic" id="msg-g"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="control-group bb" id="">
+
+                                                <label class="control-label">组名:</label>
+
+                                                <div class="controls">
+
+                                                    <span class="text display-value ss" data-display="groupname" id="group-name"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-actions clearfix">
+
+                                        <a href="javascript:;" class="btn button-previous">
+
+                                            <i class="m-icon-swapleft"></i> 返回
+
+                                        </a>
+
+                                        <a href="javascript:;" class="btn blue button-next">
+
+                                            下一步 <i class="m-icon-swapright m-icon-white"></i>
+
+                                        </a>
+
+                                        <a href="javascript:;" class="btn green button-submit">
+
+                                            提交 <i class="m-icon-swapright m-icon-white"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- END EXAMPLE TABLE PORTLET-->
+
+                </div>
+
+            </div>
+
+            <!-- END PAGE CONTENT-->
+
+        </div>
+
+        <!-- END PAGE CONTAINER-->
+
+    </div>
+
+    <!-- END PAGE -->
+
+</div>
+
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-inner">
+
+        Copyright 2017-2022 <a href="http://www.dsgdata.com/" >www.dsgdata.com</a> 迪思杰 京ICP备05013295号
+
+    </div>
+
+    <div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+    </div>
+
+</div>
+
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<script src="media/js/localhost.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="media/js-plus-in/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/bootstrap.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+
+<script src="media/js-plus-in/excanvas.min.js"></script>
+
+<script src="media/js-plus-in/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="media/js-plus-in/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js-plus-in/jquery.uniform.min.js" type="text/javascript" ></script>
+
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<script type="text/javascript" src="media/js-plus-in/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/additional-methods.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/jquery.bootstrap.wizard.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/select2.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/bootstrap-timepicker.min.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/jquery.dataTable.min.js"></script>
+
+<script  src="media/jquery-confirm-master/js/jquery-confirm.js"></script>
+
+<script type="text/javascript" src="media/js-plus-in/DT_bootstrap.js"></script>
+
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+
+<script src="media/js-plus-in/app.js"></script>
+
+<script src="media/js/user_message.js" type="text/javascript"></script>
+
+<script src="media/js/synchronization.js"></script>
+
+<script src="media/js/form-wizard-synchronization.js"></script>
+
+
+
+</body>
+<script>
+    jQuery(document).ready(function() {
+
+        App.init();
+
+        FormWizard.init();
+
+        $('#timepicker1').timepicker();
+
+        $('#sample_1').dataTable({
+            "aLengthMenu": [
+                [5, 10],
+                [5, 10] // change per page values here
+            ],
+            // set the initial value
+            "iDisplayLength": 10,
+            "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
+            "aaSorting": [[ 0, "asc" ]]//默认第几个排序
+        })
+        $('#sample_2').dataTable({
+            "aLengthMenu": [
+                [5, 10],
+                [5, 10] // change per page values here
+            ],
+            // set the initial value
+            "iDisplayLength": 10,
+            "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
+            "aaSorting": [[ 0, "asc" ]]//默认第几个排序
+        })
+    });
+</script>
+</html>
